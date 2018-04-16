@@ -1,0 +1,8 @@
+{
+    "quotmark":  "single",
+    "eqeqeq":    true,
+    "newcap":    false,
+    "undef":     true,
+    "unused":    true,
+    "node":        true
+  }
