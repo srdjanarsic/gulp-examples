@@ -10,5 +10,11 @@ Testing gulp features.
 
 ## Examples
 
-[async-execution](./async-execution) - async execution using callback.\
-[jshint](./jshint) - jshint example (jshint and jshint-stylish), including watcher.
+### [async-execution](./async-execution) - async execution using callback
+
+Shows how to inform gulp when task is done. this example uses callback. Also we can return stream, Promise, Observable(v4)  
+
+
+[jshint](./jshint) - jshint example (jshint and jshint-stylish), including watcher.\
+[debug](./debug) - output stream events to console.\
+[plumber](./plumber) - handling stream errors with plumber
