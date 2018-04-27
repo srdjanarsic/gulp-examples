@@ -9,6 +9,15 @@ var source = '**/*.js'; // all js files
 
 var countFiles = 0;
 
+// process only one file and break.
+gulp.task('without-plumber', function(){
+    return gulp
+        .src(source)
+        .pipe(thisBreaks())
+        .pipe(out());
+});
+
+// this continues, does not break pipe.
 gulp.task('with-plumber', function(){
     return gulp
         .src(source)
@@ -17,14 +26,7 @@ gulp.task('with-plumber', function(){
         .pipe(out());
 });
 
-// run only one file
-gulp.task('without-plumber', function(){
-    return gulp
-        .src(source)
-        .pipe(thisBreaks())
-        .pipe(out());
-});
-
+// this will break our pipeline
 var thisBreaks = () => {
     return through.obj((file, enc, cb) => {
         console.log("INSIDE BREAK: " + file.path);
@@ -34,6 +36,7 @@ var thisBreaks = () => {
     });
 }
 
+// simple logging
 var out = () => {
     return through.obj((file, enc, cb) => {
         console.log("LOG: " + file.path);
