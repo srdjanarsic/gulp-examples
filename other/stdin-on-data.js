@@ -1,0 +1,2 @@
+// capture stdin 'data' event
+

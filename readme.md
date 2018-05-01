@@ -38,7 +38,10 @@ Sometimes, usally during development it is useful to get all errors instead of g
 
 Shows how to execute shell command (or cli tool).
 
+### [other](./other) - bunch of other useful nodejs scripts
+
+* `simple-stream-example.js` pipe in-out streams
+* `stdin-on-data.js` capture stdin (keyboard input)
 
 
-TODO: TRANSFORMABLE STREAM, node stream, readable stream, STREAM !!!!!
-
+Shows how to execute shell command (or cli tool).
